@@ -2,8 +2,6 @@ from playwright.sync_api import sync_playwright
 import os
 
 
-
-
 def main():
 
     with sync_playwright() as p:
@@ -13,7 +11,6 @@ def main():
         page = browser.new_page()
 
         page.goto("https://js-trebesin.github.io/playwright-exam/")
-
 
         page.fill('input[id="login"]', meno)
         page.fill('input[id="pass"]', heso)
@@ -26,7 +23,7 @@ def main():
 
         input("dobre ranko prosim jednicku s hvezdickou")
         browser.close()
-    
+
 
 if __name__ == "__main__":
     main()
